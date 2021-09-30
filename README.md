@@ -1,16 +1,20 @@
-### Hi there 👋
+# Parallel crawling research
+Repository with implementation of crawlers from the corresponding paper.
 
-<!--
-**crawler-research/crawler-research** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Description:
+This repository holds implementations of three types of crawlers:
+ * thread-per-socket
+ * process-per-socket
+ * using epoll
+ 
+All three crawlers are based on the implementation of the abstract crawler.
 
-Here are some ideas to get you started:
+There are also implementations of benchmarking, helper modules (such as directory parsing and
+results visualization) and instructions for server setup.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Global parameters:
+In order for testing of the crawlers to be consistent and representative we have 
+set some parameters, which should be the same for all the crawlers:
+* **OS (for benchmarking):** Ubuntu 20.04 LTS
+* **Compiler:** GCC 9.3.0 version
+* **CMake:** 3.16+ version
